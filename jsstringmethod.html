@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS String</title>
+	<style type="text/css">
+		#mm{
+			color: red;
+			font-size: 50px;
+		}
+		#thai{
+			font-family: Arial;
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1 id='mm'>Myanmar</h1>
+		<h1 id='thai'>Thailand</h1>
+	</div>
+	<script type="text/javascript">
+		
+
+		let val = 'Maung Maung';
+		let vl = 'kyaw'
+
+		mn = val+vl;
+		console.log(mn);
+
+
+		//Append
+		val +=vl;
+		console.log(val);
+
+
+		//Concat
+		var firstname = 'Zayar';
+		var lastname = ' Kyaw';
+		var fullname = firstname.concat(lastname);
+		console.log(fullname);
+
+		console.log(fullname[0]);
+		console.log(fullname[fullname.length-1]);
+
+		//charat
+		console.log(fullname.charAt(2));
+		console.log(fullname.charAt(fullname.length-1));
+
+		let fav = 'My fav color is black color';
+		console.log(fav);
+		//result =>true
+		console.log(fav.includes('black'));
+		//result =>false
+		console.log(fav.includes('red'));
+		//result =>false
+		console.log(fav.includes('Black'));
+		//result =>false
+		console.log(fav.includes('BLACK'));
+		//result =>true
+		console.log(fav.includes('bla'));
+
+		//replace(old,new)
+		console.log(fav.replace('black','blue'));
+		console.log(fav.replace('bla','red'));
+		console.log(fav.replace('color','parpar')); 
+		// note**if there are two words 'color',the first word only can be overwrite.
+
+		//substring
+		console.log(fav.substring(0,10)+'...');
+		console.log(fav.substring(0,10).concat('...'));
+
+		//Change case
+		console.log(fav.toUpperCase());
+		console.log(fav.toLowerCase());
+
+		//style
+		let abc = document.getElementById('mm');
+		document.getElementById('mm').style.color = 'green';
+		document.getElementById('mm').style.fontSize = '80px';
+		console.log(abc);
+
+		document.getElementById('thai').style.color = 'blue';
+		document.getElementById('thai').style.fontFamily = 'Arial';
+		document.getElementById('thai').style.display = 'none';
+
+
+	</script>
+</body>
+</html>

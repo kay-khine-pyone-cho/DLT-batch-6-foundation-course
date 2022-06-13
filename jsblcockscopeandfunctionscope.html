@@ -1,0 +1,298 @@
+<!-- 18 Feb -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Block Scope and Function Scope</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let a = 1;
+      var b = 2;
+      const c = 5;
+      function myfunone() {
+        return a + b + c;
+      }
+      console.log("Global Scope variable in function =", myfunone());
+      (RS) => 8;
+      // ---------------------------
+      //Overwrite
+      function myfuntwo() {
+        a = 10;
+        b = 20;
+        // c=30;
+        console.log("Global Scope variable in function =", a, b, c);
+      }
+      myfuntwo();
+      // RS =>10 20 5
+      console.log("Global Scope =", a, b, c);
+      // RS =>10 20 5
+
+      // function ထဲက value ကို global ထိခေါ်သွားနိုင်(const တော့မပါ)
+
+      // ----------------------
+      //Declare
+      var x = 1;
+      let y = 2;
+      const z = 3;
+      function myfunthree() {
+        var x = 10;
+        let y = 20;
+        const z = 30;
+        console.log("Declare ..Global scope variable in function = ", x, y, z);
+      }
+      myfunthree();
+      // RS=>10 20 30
+      console.log("Global scope variable = ", x, y, z);
+      // RS=> 1 2 3
+
+      // _____________________________________________________________________
+      //Statement
+
+      var e = 5;
+      let f = 2;
+      const g = 3;
+
+      if (true) {
+        console.log("If statement/ Global scope variable =", e, f, g);
+      }
+
+      // ----------------
+      //overwrite in if
+      if (true) {
+        e = 50;
+        f = 20;
+        // g = 30; **error of const
+        console.log(
+          "If statement/ Global scope variable  in function=",
+          e,
+          f,
+          g
+        );
+        // RS=> 50 20 3
+      }
+      console.log("Global scope variable =", e, f, g);
+      // RS=> 50 20 3
+
+      // --------------------
+      //declare in if
+      if (true) {
+        var e = 8;
+        let f = 9;
+        const g = 11;
+        console.log(
+          "If statement/ Global scope variable in function=",
+          e,
+          f,
+          g
+        );
+        // RS =>8 9 11
+
+        var p = 50;
+        let q = 60;
+        const r = 70;
+        console.log("p,q,r in statements =", p, q, r);
+      }
+      console.log("If statement/ Global scope variable=", e, f, g);
+      // RS=> 8 20 3
+      // var cah be out to global.
+
+      console.log("p,q,r into global =", p);
+      // RS =>50 (**error** let , const cannot go out into global)
+      // ____________________________________________________________________
+
+      //Loop
+      // for(const x=0; x < 10; x++){
+      // 	console.log(x);
+      // }
+      // Rs=> 0 and **error**(const can't be overwrite)
+
+      // for (let d = 0; d < 10; d++) {
+      //   console.log(d);
+      // }
+      // RS=> 0 to 10
+
+      // console.log('d in outside',d);
+      // RS=> **error** variable in for loop cannot be called to global
+
+      // for (var e = 0; e < 10; e++) {
+      //   console.log(e);
+      // }
+      // RS=>0 to 10
+      // console.log("e in outside", e);
+      // Rs =>10
+
+      // var num1 = 0;
+      // let num2 = 0;
+      // const num3 = 0;
+      // for(num1;num1<10;num1++){
+      // 	console.log('looping var num1 :',num1)
+      // }
+      // RS=>0 to 9
+
+      // console.log('Global scope:',num1,num2,num3);
+      // Rs=> 10 0 0
+
+      // for(num2;num2<10;num2++){
+      // 	console.log('looping var num2 :',num2)
+      // }
+      // Rs=>0 to 10
+      // console.log('Global scope:',num1,num2,num3);
+      // Rs=> 0 10 0
+
+      // for (num3; num3 < 10; num3++) {
+      //   console.log("looping var num3 :", num3);
+      //  Rs=>0
+      // }
+      // console.log("Global scope:", num1, num2, num3);
+      // Rs=> **error***
+
+      // -------
+      var num5 = 1;
+      let num6 = 2;
+      const num7 = 3;
+
+      //Declare
+
+      // for (var num5 = 5; num5 < 10; num5++) {
+      //   console.log(num5);
+      // }
+      // console.log("Global scope:", num5, num6, num7);
+
+      // for (let num6 = 6; num6 < 10; num6++) {
+      //   console.log(num6);
+      // }
+      // console.log("Global scope:", num5, num6, num7);
+
+      // for (num7; num7 < 10; num7++) {
+      //   console.log(num7);
+      // }
+      // console.log("Global scope:", num5, num6, num7); //error
+
+      // ___________________________________________________
+
+      // Object
+
+      var student = {
+        fullname: "aung tun tun",
+        age: 16,
+        phone: "12345",
+      };
+      console.log(student);
+
+      console.log(student.fullname);
+      console.log(student.age);
+      console.log(student.phone);
+
+      student.city = "mandalay";
+      console.log(student);
+      console.log(student.city);
+
+      //overwrite
+      student.age = 20;
+      console.log(student.age);
+      console.log(student);
+
+      student = {
+        fullname: "aung kyaw kyaw",
+      };
+      console.log(student);
+      console.log(student.fullname);
+      console.log(student.age);
+      console.log(student.phone);
+
+      let members = {
+        fullname: "mya mya",
+        age: 15,
+        phone: "123456",
+      };
+      console.log(members);
+      console.log(members, members.fullname, members.age, members.phone);
+
+      //create
+      members.city = "yangon";
+      console.log(members);
+
+      //overwrite
+      members.age = 20;
+      console.log(members);
+
+      members = {
+        fullname: "hla hla",
+      };
+      console.log(members);
+
+      // ---------------
+
+      const customer = {
+        name: "yar yar",
+        age: 30,
+        phone: "23445",
+      };
+      console.log(customer);
+      console.log(customer.name, customer.age, customer.phone);
+
+      //create
+      customer.city = "bago";
+      console.log(customer);
+
+      //overwrite
+      customer.age = 40;
+      console.log(customer);
+
+      // customer = {
+      //   name: "kyaw kyaw",
+      // };
+      // console.log(customer); //error
+
+      // ____________________________________________________
+
+      //Array
+      var arrboys = ["aung", "maung", "kyaw"];
+      console.log(arrboys);
+
+      arrboys = ["naung", "zaw", "naw"];
+      console.log(arrboys);
+
+      arrboys[0] = "htun";
+      console.log(arrboys);
+
+      arrboys[3] = "kaung";
+      console.log(arrboys);
+
+      arrboys.push("taung");
+      console.log(arrboys);
+
+      let arrgirls = ["aye", "chan", "yu"];
+      console.log(arrgirls);
+
+      arrgirls = ["su", "may", "san"];
+      console.log(arrgirls);
+
+      arrgirls[0] = "htwe";
+      console.log(arrgirls);
+
+      arrgirls[3] = "mya";
+      console.log(arrgirls);
+
+      arrgirls.push("mi");
+      console.log(arrgirls);
+
+      const colors = ["red", "blue", "brown"];
+      console.log(colors);
+
+      // colors = ["blue", "black", "yellow"];
+      // console.log(colors); //error
+
+      colors[0] = "white";
+      console.log(colors);
+
+      colors[3] = "violet";
+      console.log(colors);
+
+      colors.push("pink");
+      console.log(colors);
+    </script>
+  </body>
+</html>
+
+<!-- let and const are block scope. var are function scope. -->

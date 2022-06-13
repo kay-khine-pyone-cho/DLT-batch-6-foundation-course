@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>Form Elements</title>
+</head>
+<body>
+	<h1>Form Tag</h1>
+	<fieldset>
+		<legend align="center">This is sample form..&copy&cent</legend>
+	<form action="" method="" enctype="multipart/form-data"> 
+		<label for="firstname">First Name</label>
+		<input type="text" name="firstname" id="firstname" class="" placeholder="Enter your first name" maxlength="20" minlength="4" autocomplete="off" autofocus/>
+		<br/><br/>
+
+		<label for="lastname">Last Name</label>
+		<input type="text" name="lastname" id="lastname" class="" placeholder="Enter your last name" maxlength="20" minlength="4" />	
+		<br/><br/>
+
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" class="" placeholder="Enter your Password" minlength="6" />
+		<br/><br/>
+
+		<label for="age">Age</label>
+		<input type="number" name="age" id="age" class="" placeholder="Enter your age" max="100" min="12"/>
+		<br/><br/>
+
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" class="" placeholder="Enter your email" required readonly/>
+		<br/><br/>
+
+		<label>Gender</label>
+		<input type="radio" name="gender" id="genderm" class="" value="1" checked/><label for="genderm">Male</label>
+		<input type="radio" name="gender" id="genderf" class="" value="0"/><label for="genderf">Female</label>
+		<input type="radio" name="gender" id="gendero" value="2" class="" value="2"/><label for="gendero">Other</label>
+		<br/><br/>
+		<!-- 1 for male/0 for female/2 for other(just suggestion) -->
+
+		<label>Salary</label>
+		<input type="radio" name="salary" id="salaryc" class="" value="C" required/><label for="salaryc">Cash</label>
+		<input type="radio" name="salary" id="salarym" class="" value="M" required/><label for="salarym">Mobile Banking</label>
+		<!-- C for cash/M for mobile banking -->
+		<br/><br/>
+
+		<label>Choose your favourite colour</label>
+		<input type="checkbox" name="color" id="colorred" class="" value="R" checked><label for="colorred">Red</label>
+		<input type="checkbox" name="color" id="colorgreen" class="" value="G"><label for="colorgreen">Green</label>
+		<input type="checkbox" name="color" id="colorblue" class="" value="Be"><label for="colorblue">Blue</label>
+		<input type="checkbox" name="color" id="colorblack" class="" value="Bk"><label for="colorblack">Black</label>
+		<br/><br/>
+
+		<label for="country">Citizen</label>
+		<select name="country" id="country" class="">
+			<option disabled selected>Choose your Country</option>
+			<option value="mm">Myanmar</option>
+			<option value="th">Thailand</option>
+			<option value="laos">Laos</option>
+			<option value="slk">Srilanka</option>
+			<option value="indo">Indonesia</option>
+		</select>
+		<br/><br/>
+
+		<label for="role">Role</label>
+		<select name="role" id="role" class="" multiple>
+		<!-- 	<option selected disabled>Choose role</option> -->
+			<option value="1">manager</option>
+			<option value="2">Editor</option>
+			<option value="2">Supervisor</option>
+			<option value="3">Sales</option>
+		</select>
+		<br/><br/>
+
+		<label for="dob">DOB</label>
+		<input type="date" name="dob" id="dob" class=""/>
+		<br/><br/>
+
+		<label for="bt">Booking Time</label>
+		<input type="time" name="bt" id="bt" class=""/>
+		<br/><br/>
+
+		<label for="datetime">Date Time</label>
+		<input type="datetime-local" name="datetime" id="datetime" class=""/>
+		<br/><br/>
+
+		<label for="volume">Volume</label>
+		<input type="range" name="volume" id="volume" class="" min="0" max="100" value="0" step="10"/>
+		<br/><br/>
+
+		<label for="bio">Bio</label>
+		<textarea name="bio" id="bio" class="" rows="5" placeholder="Write something..." readonly></textarea>
+		<br/><br/>
+
+		<label for="nrc">NRC</label>
+		<input type="file" name="nrc" id="nrc" class="" multiple/>
+		<br/><br/>
+
+		<input type="hidden" name="location" id="location" class=""/>
+		<br/><br/>
+
+		<input type="reset" name="reset" id="reset" class=""/>
+		<input type="submit" name="submit" id="submit" class=""/>
+		<button type="submit" name="login" id="login" class="">Login</button>
+
+
+	</fieldset>
+	</form>
+</body>
+</html>
+
+
+<!-- Stand alone Attribute>>>>disabled/multiple/required/autofocus/selected/checked/readonly/controls/loop
+Select/Option
+Selected/Checked -->

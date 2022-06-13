@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0 auto;
+}
+section {
+  width: 100%;
+  height: 100%;
+}
+.row {
+  width: 100%;
+  height: 100%;
+  background: url(../img/background.jpg);
+}
+.row h1 {
+  color: #fff;
+  font-size: 180%;
+  text-align: center;
+  padding: 15px;
+  text-shadow: -4px -4px 2px #000;
+}
+fieldset {
+  height: 450px;
+  margin: 0 10px;
+}
+fieldset legend {
+  color: yellow;
+  font-family: "Fruktur", cursive;
+  text-align: right;
+  margin-right: 20px;
+}
+fieldset .p1 {
+  color: yellow;
+  font-family: "Fruktur", cursive;
+  text-align: right;
+  letter-spacing: 2px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+.form-section {
+  width: 24%;
+  height: 65%;
+  margin: auto;
+  border: 2px dotted #fff;
+  text-align: right;
+}
+.log-in-section {
+  margin-right: 20px;
+}
+.p2,
+label {
+  color: #fff;
+  text-align: center;
+  text-shadow: -4px -4px 3px #000;
+}
+.p2 {
+  padding-top: 10px;
+}
+input {
+  width: 200px;
+  height: 25px;
+  margin-top: 4px;
+  margin-right: 20px;
+}
+button {
+  padding: 2px 6px;
+}
+.submit {
+  margin-right: 20px;
+  margin-top: 5px;
+}
+.p3 {
+  font-size: 90%;
+  padding-top: 20px;
+  color: #fff;
+  text-align: justify;
+}
+.p3 a {
+  color: yellow;
+}

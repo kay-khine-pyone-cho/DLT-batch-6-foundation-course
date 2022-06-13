@@ -1,0 +1,56 @@
+/*Selector
+Element Selector
+Group Selector =corma,
+ID Selector
+*/
+
+/*Single Element Selector*/
+h1{
+	color: red;
+}
+
+/*Group Element Selector*/
+h2,h3,h4{
+	color: blue;
+}
+h5,h6{
+	color: grey;
+	font-size: 15;
+}
+
+/*Single ID Selector*/
+#myself{
+	color:gold;
+}
+#mm{
+	color:grey;
+}
+#japu{
+	color:green;
+}
+
+/*Group ID Selector*/
+
+#myself,#mm,#japu{
+	color:pink;
+}
+
+.ph{
+	color:darkblue;
+}
+.f30{
+	font-size:30px;
+}
+.f25{
+	font-size:25px;
+}
+/*.ph,.phone{
+	color:darkgoldenrod;
+}*/
+.hay{
+	color:darkred;
+	font-size:30px;
+}
+.day
+{color:darkgreen;
+}

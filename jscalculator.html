@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      body {
+        height: 100vh;
+        background: url("./img/cal-bg.jpg");
+        background-size: cover;
+        background-position: center;
+
+        overflow: hidden;
+        margin-left: 150px;
+        margin-top: 50px;
+      }
+      .card {
+        width: 30%;
+        height: 70%;
+        background-color: transparent;
+        border-radius: 10px;
+      }
+      .card form .result-screen {
+        width: 94%;
+        height: 100px;
+        margin-bottom: 10px;
+        box-shadow: 2px 2px 5px rgb(102, 101, 101);
+      }
+
+      .result-screen input {
+        width: 100%;
+        height: 25px;
+        font-size: 28px;
+
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: rgb(20, 20, 20);
+        background-color: transparent;
+        text-align: right;
+        letter-spacing: 5px;
+        padding-top: 10px;
+      }
+      .btn {
+        width: 21%;
+        height: 45px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgb(102, 101, 101);
+        margin-left: 5px;
+        background-color: transparent;
+        color: rgb(52, 51, 51);
+        font-size: 22px;
+      }
+      .btn-equal {
+        width: 45%;
+      }
+      .btn-clr,
+      .btn-equal,
+      .btn-dlt {
+        background-color: peachpuff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <form action="" method="">
+        <div class="result-screen">
+          <input type="text" name="display" id="display" class="display" />
+          <input type="text" name="result" id="result" class="result" />
+        </div>
+
+        <button type="button" id="clear" class="btn btn-clr" onclick="clr()">
+          AC
+        </button>
+        <button type="button" id="delete" class="btn btn-dlt" onclick="del()">
+          Del
+        </button>
+        <button type="button" id="mod" class="btn btn-sign" onclick="sign('%')">
+          %
+        </button>
+        <button type="button" id="div" class="btn btn-sign" onclick="sign('/')">
+          /
+        </button>
+        <br /><br />
+
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('7')">
+          7
+        </button>
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('8')">
+          8
+        </button>
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('9')">
+          9
+        </button>
+        <button
+          type="button"
+          id="multi"
+          class="btn btn-sign"
+          onclick="sign('*')"
+        >
+          *
+        </button>
+        <br /><br />
+
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('4')">
+          4
+        </button>
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('5')">
+          5
+        </button>
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('6')">
+          6
+        </button>
+        <button type="button" id="sub" class="btn btn-sign" onclick="sign('-')">
+          -
+        </button>
+        <br /><br />
+
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('1')">
+          1
+        </button>
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('2')">
+          2
+        </button>
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('3')">
+          3
+        </button>
+        <button type="button" id="sub" class="btn btn-sign" onclick="sign('+')">
+          +
+        </button>
+        <br /><br />
+
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('.')">
+          .
+        </button>
+        <button type="button" id="" class="btn btn-sign" onclick="getbtn('0')">
+          0
+        </button>
+
+        <button
+          type="button"
+          id="sub"
+          class="btn btn-equal"
+          onclick="calculate()"
+        >
+          =
+        </button>
+        <br /><br />
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      display = document.getElementById("display");
+      result = document.getElementById("result");
+
+      function getbtn(inp) {
+        display.value += inp;
+      }
+      function sign(sign) {
+        display.value += sign;
+      }
+      function clr() {
+        display.value = "";
+        result.value = "";
+      }
+      function calculate() {
+        result.value = eval(display.value);
+      }
+      function del() {
+        display.value = display.value.substr(0, display.value.length - 1);
+      }
+    </script>
+  </body>
+</html>

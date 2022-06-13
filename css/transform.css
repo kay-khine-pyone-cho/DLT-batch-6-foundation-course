@@ -1,0 +1,47 @@
+:root{
+	--oc: yellow;
+	--gn: green;
+	--vi: violet;
+
+}
+.div1{
+	width: 100px;
+	height: 80px;
+	background-color: var(--gn);
+
+	transform: rotate(-15deg);
+}
+.div2{
+	width: 200px;
+	height: 80px;
+	background-color: var(--oc);
+
+	transform: rotateX(30deg);
+}
+.div3{
+	width: 200px;
+	height: 80px;
+	background-color: pink;
+
+	transform: scale(1.5);
+}
+.div4{
+	width: 200px;
+	height: 80px;
+	background-color: var(--vi);
+
+	transform: rotateY(45deg);
+
+}
+.div5{
+	width: 200px;
+	height: 80px;
+	background-color: cyan;
+}
+.div6{
+	width: 200px;
+	height: 80px;
+	background-color: darkblue;
+
+	transform: skewY(10deg);
+}

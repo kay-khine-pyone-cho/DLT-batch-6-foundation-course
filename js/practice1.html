@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice 1 (Search data)</title>
+  </head>
+  <body>
+    <label for="search">Search Here</label>
+    <input type="text" id="search" />
+    <button>Search</button>
+    <p></p>
+  </body>
+  <script>
+    let data = ["mya:12345", "kay:23456", "khine:34567", "ku:45678"];
+    let getinput = document.querySelector("input");
+    let getbutton = document.querySelector("button");
+    let getp = document.querySelector("p");
+    getbutton.addEventListener("click", function () {
+      let searchData = getinput.value.toLowerCase();
+
+      for (let i = 0; i < data.length; i++) {
+        let splitdata = data[i].split(":");
+        if (splitdata[0].toLowerCase() === searchData) {
+          getp.textContent = splitdata[0] + " Number is " + splitdata[1];
+          break;
+        } else {
+          getp.textContent = searchData + " Is not Found";
+        }
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			font-family: sans-serif;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.container{
+			width: 980px;
+			border: 2px solid #000;
+			padding: 5px;
+		}
+
+		/*********************************/
+
+		/*.header{
+			padding: 40px 200px;
+			background: pink;
+		}
+		.left{
+			float: left;
+		}
+		.left1{
+			padding: 30px 50px;
+			background: red;
+			
+		}
+		.left2{
+			padding: 60px 50px;
+			background: blue;
+			
+		}
+		.right{
+			padding: 99px 150px;
+			background: orange;
+			float: right;
+			
+		}
+		.content::after{
+			content: '';
+			display: block;
+			clear: both;
+			height: 0;
+			visibility: hidden;
+		}
+		.footer{
+			padding: 20px 200px;
+			background: gray;
+			
+		}*/
+
+		/*************************************/
+		/*.header{
+			padding: 40px 200px;
+			background: pink;
+		}
+		.content{
+			display: flex;
+		}
+		.left{
+			flex: 1;
+		}
+		.left1{
+			padding: 30px 0px;
+			background: red;
+			
+		}
+		.left2{
+			padding: 60px 0px;
+			background: blue;
+			
+		}
+		.right{
+			padding: 99px 0;
+			background: orange;	
+			flex: 2;
+			display: flex;
+			justify-content: center;
+			}
+		
+		.footer{
+			padding: 20px 200px;
+			background: gray;		
+		}*/
+		/*__________________________Grid_______________*/
+		.container{
+			color: #333;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(7, minmax(60px,auto));
+			grid-column-gap: 10px;
+			grid-row-gap: 10px;
+
+		}
+		/*.container div{
+			background: #222;
+
+		}
+		.container div:nth-child(odd){
+			background: #999;
+		}*/
+		.header{
+			grid-column: 1/4;
+			grid-row: 1/3;
+			background: pink;
+			text-align: center;
+			line-height: 120px;
+		}
+		.left1{
+			grid-column: 1/2;
+			grid-row: 3/4;
+			background: red;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.left2{
+			grid-column: 1/2;
+			grid-row: 4/7;
+			background: hotpink;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.right{
+			grid-column: 2/4;
+			grid-row: 3/7;
+			background: chocolate;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.footer{
+			grid-column: 1/4;
+			
+			background: peachpuff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">header</div>
+				<div class="left1">left1</div> 
+				<div class="left2">left2</div> 			
+			
+			<div class="right">right</div>  
+			
+	 
+		<div class="footer">footer</div>  
+	</div>  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

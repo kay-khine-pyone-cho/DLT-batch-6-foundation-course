@@ -1,0 +1,96 @@
+/*Local Font Integrate*/
+/*i.Local Machine Integrate*/  /*local hte mhr shi mha font paw*/
+/*ii.Project Folder Integrate*/
+
+/*Global Font Integrate*/  /*CDN=>Content Deliver Network*/
+							/*LM=> Install lote p mha tone*/
+							/*PEM*/
+
+
+
+/*i.Local Font Integrate*/
+/*.p1{
+	font-family: 'Courier New';
+	font-family: Forte,Century,Arial; [first forte,sec Century,..]
+
+}.p2{
+	font-family: Arial;
+}
+body{
+	font-family: Arial,Century,'Times New Roman';
+}
+*/
+
+/*ii.Global Font Integrate (CDN)*/
+/*@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+.p1{
+	font-family: Stick,sans-serif;
+}*/
+/*.p2{
+	font-family: 'Akaya Kanadaka', cursive;
+}*/
+
+/*ii.Project Folder Integrate*/
+/*Fake image..Pone yeik yaung a ny nae describe(not install)*/
+
+@font-face{
+	font-family: 'Stick';
+	src: local('Stick-Regular'),url('../libs/fonts/stick/Stick-Regular.ttf');
+}
+@font-face{
+	font-family: 'Akaya';
+	src: Local('AkayaKanadaka-Regular'),url('../libs/fonts/akayakanadaka/AkayaKanadaka-Regular.ttf');
+}
+.p1{
+	font-family: 'Stick';
+}
+.p2{
+	font-family: 'Akaya';
+}
+.p3{
+	/*font-style: italic;*/
+	/*text-indent: 50px;*/
+	/*text-transform: uppercase;*/
+	text-transform: capitalize;
+	te
+}
+.al{
+	text-decoration: none;
+	color: darkred;
+}
+.al:visited{
+	color: pink;
+}
+.al:hover{
+	color: blue;
+	font-size: 24px;
+}
+.menutext{
+	font-family: Akaya;
+	text-decoration: none;
+	background-color: darkcyan;
+	color: #fff;
+	/*letter-spacing: 2px;*/
+	/*padding: 10px;*/
+	/*padding: 10px 20px;*/
+	/*padding: 10px 20px 30px 40px;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 10px;
+	transition: all 2s;
+
+}
+.menutext:hover{
+	letter-spacing: 2px;
+	background-color: cyan;
+	color: yellow;
+}
+
+
+
+
+
+

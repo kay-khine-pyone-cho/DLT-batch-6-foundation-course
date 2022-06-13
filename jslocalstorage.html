@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Local Storage</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+	//Local storage
+	// localStorage.setItem('name','aung aung');
+	// localStorage.setItem('age',27);
+	// localStorage.setItem('city','Yangon');
+
+	let getname1 = localStorage.getItem('name');
+	let getage1 = localStorage.getItem('age');
+	let getcity1 = localStorage.getItem('city')
+	console.log(getname1);
+	console.log(typeof getname1);
+
+	console.log(getage1);
+	console.log(typeof getage1);
+
+	console.log(getcity1);
+	console.log(typeof getcity1);
+	// ***outputs are all as string
+
+
+	//Update
+	//Method1
+	localStorage.setItem('name','kyaw kyaw');
+	//Method2
+	localStorage.age = 30;
+
+	//Delete
+	//Method1(single)
+	//localStorage.removeItem('name');
+	// localStorage.removeItem('age');
+	// localStorage.removeItem('city');
+	//Method2
+	//localStorage.clear();
+	// ____________________________________________________
+
+	//Session Storage
+	sessionStorage.setItem();
+	sessionStorage.getItem();
+	sessionStorage.removeItem();
+	sessionStorage.clear();
+
+	// _____________________________________________________
+
+
+
+
+			
+		</script>
+	</body>
+</html>
+
+Cookie
+4kp
+sv/br	(server/browser)
+manual 
+all tab
+
+
+			
+Local Storage
+5mb to 10mb
+br (browser)
+manual
+all tab
+
+session storage
+5mb
+br (browser)
+tab close => delete
+private tab

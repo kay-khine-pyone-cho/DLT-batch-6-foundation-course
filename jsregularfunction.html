@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Function</title>
+	<style>
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		height: 100vh;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin: 0;
+		overflow: hidden;
+	}
+	.box{
+		width: 300px;
+		background: #f4f4f4;
+		padding: 10px;
+		box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+
+	}
+	label{
+		display: block;
+		margin-bottom: 10px;
+	}
+	.form-control{
+		width: 100%;
+		display: block;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	.btn{
+		width: 100%;
+		font-size: 16px;
+		background: darkblue;
+		color: #fff;
+		border: none;
+		padding: 5px;
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<h3>Show Name = <span id='replacename'>Test</span></h3>
+
+		<label for='firstname'>First Name</label>
+		<input type='text' name='firstname' id='firstname' class="form-control" autocomplete="off" autofocus/>
+
+		<label for='lastname'>Last Name</label>
+		<input type='text' name='lastname' id='lastname' class="form-control" autocomplete="off" autofocus/>
+
+		<button type='button' onclick='getdata()' class="btn">Get Name</button>
+	</div>
+
+	<script type="text/javascript">
+
+
+		function getdata(){
+			// console.log('hay i\'m workin')
+			// const getfirstname = document.getElementById('firstname').value;
+			// const getlastname = document.getElementById('lastname').value;
+			// // console.log(getfirstname,getlastname);
+			// const getreplacename = document.getElementById('replacename');
+			// // getreplacename.innerText = `${getfirstname} ${getlastname}`;
+			// // getreplacename.textContent = `${getfirstname} ${getlastname}`;
+			// getreplacename.innerHTML = `${getfirstname} ${getlastname}`;
+
+			// document.getElementById('firstname').value='';
+			// document.getElementById('lastname').value='';
+
+			// document.getElementById('firstname').focus();
+
+			// ---------------------
+
+			const getfirstname = document.getElementById('firstname');
+			const getlastname = document.getElementById('lastname');
+			const getreplacename = document.getElementById('replacename');
+
+			getreplacename.innerText = `${getfirstname.value} ${getlastname.value}`;
+
+			getfirstname.value ='';
+			getlastname.value = '';
+			getfirstname.focus();
+
+
+
+		}
+		// Function
+
+		// function name(){
+		// 	code to be executed
+		// }
+
+		// name();
+
+
+
+		// // 1.Regular function
+		// 	(i) manual function
+		// 	(ii) paramenter function
+		// // 2.Arrow function
+		// 	(i) manual function
+		// 	(ii) paramenter function
+
+
+		// Regular Function 
+
+			// i. Manual Function 
+
+
+			function greet(){
+				console.log("Hello Myanmar");
+				console.log("Hello Thailand");
+				console.log("Hello Indonesia");
+			}
+
+			greet();
+			greet();
+
+
+
+			// we can invoke function before creating function 
+			// function hello(){
+			// 	console.log("Hello Yangon");
+			// }
+
+			// hello(); //result = Hello Mandalay
+
+
+			// function hello(){
+			// 	console.log("Hello Mandalay");
+			// }
+
+			// hello(); //result = Hello Mandalay
+
+
+			// function hello(){
+			// 	window.alert("Hello Yangon");
+			// 	window.alert("Hello Mandaly");
+			// 	window.alert("Hello Bago");
+			// }
+
+			// hello();
+
+
+			// function hello(){
+			// 	document.write("Hello Yangon");
+			// 	document.write("Hello Mandalay");
+			// 	document.write("Hello Bago");
+
+			// }
+
+			// hello();
+
+
+
+
+			function funone(){
+				console.log("i am function one");
+			}
+
+			function funtwo(){
+
+				funone();
+
+				console.log("i am function two");
+
+				funthree();
+
+			}
+
+			function funthree(){
+				funone();
+
+				console.log("i am function three");
+			}
+
+
+			funthree();
+
+// ----------------------------------------------------------
+
+	// RETURN 
+
+	function funfour(){
+		console.log(4);
+	}
+
+	function funfive(){
+		console.log(5);
+	}
+
+	function funsix(){
+		// funfour();
+		// funfive();
+
+		const num1 = funfour();
+		const num2 = funfive();
+		console.log(num1);
+		console.log(num2);
+
+		const total = num1+num2;
+		console.log(total); //result = NaN(Not a Number)
+
+	}
+
+	funsix();
+
+
+	
+
+	function funseven(){
+		return 7;
+	}
+
+	// console.log(funseven());
+
+	function funeight(){
+		return 8;
+	}
+
+	// console.log(funeight());
+
+
+	// function funnine(){
+	// 	const num1 = funseven();
+	// 	const num2 = funeight();
+
+	// 	// console.log(num1);
+	// 	// console.log(num2);
+
+	// 	var total = num1 + num2;
+	// 	console.log(total);
+	// }
+
+	// funnine();
+
+
+	function funnine(){
+		const num1 = funseven();
+		const num2 = funeight();
+
+	// Method 1
+		// var total = num1 + num2;
+		// return total;
+
+		// error
+		// return var total = num1 + num2;
+
+
+	// Method 2
+	return num1 + num2;
+
+	}
+
+	console.log(funnine());
+
+
+
+	function test(){
+		var total = 100+200;
+		return "hee hee";
+	}
+
+	console.log(test());
+
+
+
+// ----------------------------------------------------------
+
+// 	(ii) paramenter function
+		// (i) Single Parameter Funciton
+
+
+	function myfun1(city){
+		// console.log("Hello "+city);
+		console.log(`Hello ${city}`);
+	}
+
+	myfun1("yangon");
+	myfun1("Myanmar");
+	myfun1();
+
+
+	function myfun2(city="Indonesia"){
+		console.log(`Hello ${city}`);
+	}
+
+
+	myfun2("Thailand");
+	myfun2("Myanmar");
+	myfun2();
+
+
+
+
+	// (i) Multi Parameter Funciton
+
+	// function multifun1(x,y,z){
+	// 	console.log(`x value is ${x} , y value is ${y} , z value is ${z}`);
+	// }
+
+	function multifun1(x=1,y=2,z=3){
+		console.log(`x value is ${x} , y value is ${y} , z value is ${z}`);
+	}
+
+	multifun1(10);
+	multifun1(10,20);
+	multifun1(10,20,30);
+	multifun1(10,20,30,40);
+	multifun1();
+
+
+	function multifun2(x=1,y=2,z=3){
+		let result = x+y+z;
+
+		return result;
+	}
+
+	console.log(multifun2(10,20,30));
+	// ___________________________
+	// 4. Nameless Fucction(Annonymous Function)
+
+	let annfunone = function(name,color){
+		console.log(`My name is ${name}. I love ${color}.`)
+	}
+	annfunone('aung aung','black');
+
+	// _________________________________
+	// 5.Seft Invoking Function
+	(function (){
+		console.log('Save Myanmar');
+	})();
+
+	(function (name){
+		console.log(`My name is ${name}.`);
+	})('Tun Tun');
+
+	// _____________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+	</body>
+</html>
+
+
+
+<!--
+functionname()
+functionname(parameter)
+functionname(argument,argument,argument);
+-->
+
+
+
+<!-- 	var name = "aung aung";
+	console.log(name);
+	result = aung aung
+
+
+	name = "kyaw kyaw";
+	console.log(name);
+	result = kyaw kyaw -->

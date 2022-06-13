@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change theme</title>
+  </head>
+  <body>
+    <label for="theme">Select your theme</label>
+    <select name="theme" id="theme">
+      <option value="black">black</option>
+      <option value="white">white</option>
+    </select>
+    <h1>This is our website</h1>
+  </body>
+  <script>
+    const select = document.querySelector("select");
+    const html = document.querySelector("html");
+    document.body.style.padding = "20px";
+
+    function update(bgcolor, textcolor) {
+      html.style.backgroundColor = bgcolor;
+      html.style.color = textcolor;
+    }
+    select.onchange = function () {
+      select.value === "black"
+        ? update("black", "white")
+        : update("white", "black");
+    };
+  </script>
+</html>

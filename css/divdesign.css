@@ -1,0 +1,94 @@
+.firstdiv{
+	width: 200px;
+	height: 100px;
+	/*background-color: green;*/
+	/*background-color: #eb4034;*/
+	background-color: rgba(100,172,127,1.00);
+
+	/*background: green;*/
+	/*background: #eb4034;*/
+	/*background: rgba(100,172,127,1.00);*/
+	color: blue;
+}
+
+.seconddiv{
+	width: 500px;
+	height: 500px;
+	/*background-image: url("../img/cover/bg1.jpg");*/
+	/*background-color: orange;*/
+	background: url("../img/cover/bg1.jpg");
+	/*background-color: url("../img/cover/bg1.jpg");not effective*/
+
+	background-repeat: no-repeat;
+	/*background-repeat: repeat;(default)*/
+	/*background-repeat: repeat-x;*/
+	/*background-repeat: repeat-y;*/
+
+	background-position: center;
+
+
+		/*to make a border has 3 properties(thick)*/
+	/*border: 2px;
+	border-style: solid;
+	border-color: red;*/
+	/*other way short hand*/
+			/*s   s      c*/
+	border: 5px solid green;
+	color: white;
+}
+
+.divthree{
+	width: 300px;
+	height: 300px;
+	border: 3px solid red;
+	/*background: orange;*/
+	color: white;
+	/*background: linear-gradient(green,violet,brown);*/
+	/*background: linear-gradient(30deg,#0a4519,#3e704b,#9ee6b1);*/
+	/*background: linear-gradient(rgba(213,215,127,1.00),rgba(177,181,127,1.00),rgba(203,141,127,1.00));*/
+	/*background: linear-gradient(
+		rgba(213,215,127,1.00),
+		rgba(177,181,127,1.00),
+		rgba(203,141,127,1.00)
+		);*/
+
+	/*background:radial-gradient(rgba(213,215,127,1.00),rgba(177,181,127,1.00),rgba(203,141,127,1.00));*/
+	background:linear-gradient(
+		45deg,
+		rgba(85,157,127,0.5),
+		rgba(108,134,127,0.5),
+		rgba(147,105,127,0.5)),
+	url("../img/cover/bg2.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	/*background: linear-gradient(
+		
+		red 30%,
+		orange 0% 70%,
+		blue 0%
+
+		);*/
+
+}
+
+.divfour{
+	width: 200px;
+	height: 300px;
+	/*backgrounSd: orange;*/
+	color: white;
+	background:linear-gradient(
+		45deg,rgba(85,157,127,0.5),
+		rgba(108,134,127,0.5),
+		rgba(147,105,127,0.5)),
+	url("../img/cover/bg2.jpg");
+	background-repeat: no-repeat;
+}
+
+/*function
+name()
+single parameter function
+name(parameter)
+multi parameter function
+name(parameter,parameter....)*/

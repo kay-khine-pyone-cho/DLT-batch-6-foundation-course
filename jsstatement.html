@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Statement</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			const num1 = 5;	
+			const num2 = 5;
+
+
+			//check only value
+			document.write("equal to (==) = " + (num1 == num2 ? 'True' : 'false') + '<br/>');
+
+			//check both value and datatype
+			document.write("equal to (===) = " + (num1 === num2 ? 'True' : 'false') + '<br/>');
+
+			//check only value
+			document.write("equal to (!=) = " + (num1 != num2 ? 'True' : 'false') + '<br/>');
+
+			//check both value and datatype
+			document.write("equal to (!==) = " + (num1 !== num2 ? 'True' : 'false') + '<br/>');
+
+			document.write("equal to (>) = " + (num1 > num2 ? 'True' : 'false') + '<br/>');
+
+			document.write("equal to (<) = " + (num1 < num2 ? 'True' : 'false') + '<br/>');
+
+			document.write("equal to (>=) = " + (num1 >= num2 ? 'True' : 'false') + '<br/>');
+
+			document.write("equal to (<=) = " + (num1 <= num2 ? 'True' : 'false') + '<br/>');
+			const id = '30';
+			if(id == 30){
+				console.log('Correct Answer');
+			}
+			else{
+				console.log('Incorrect Answer');
+			}
+
+			if(id === 30){
+				console.log('Correct Answer');
+			}
+			else{
+				console.log('Incorrect Answer');
+			}
+
+			const j = 40;
+			const k = 400;
+
+			if(j > k){
+				console.log('J is greater than k');
+			}else if(j == k){
+				console.log('J is equal to K');
+			}else{
+				console.log('J is not greater than K');
+			}
+
+
+			//Switch Statement
+
+			// switch(condition){
+			// 	case : code to be executed;
+			// 	break;
+
+			// 	case : code to be executed;
+			// 	break;
+
+			// 	case : code to be executed;
+			// 	break;
+
+			// 	default : code to be executed;
+			// 	break;
+			// }
+
+			// const color = 'white';
+			// switch(color){
+			// 	case 'black':
+			// 	console.log('My fav color is not black');
+			// 	break;
+
+			// 	case 'pink':
+			// 	console.log('My fav color is not pink');
+			// 	break;
+
+			// 	case 'red':
+			// 	console.log('I hate red');
+			// 	break;
+
+			// 	case 'white':
+			// 	console.log('Correct.My fav color white');
+			// 	break;
+
+			// 	default:
+			// 	console.log('Try again');
+			// 	break;
+			// }
+
+			// const username = prompt('Enter username');
+			// const password = prompt('Enter password');
+			// console.log(username,password);
+			// console.log(typeof username,typeof username)
+
+			// if(username == 'aungaung' && password == 12345){
+			// 	console.log('Welcome');
+			// }else {
+			// 	console.log('Try again');
+			// }
+
+
+			// if(username == 'aungaung' && password ==='12345'){
+			// 	console.log('Welcome');
+			// }else {
+			// 	console.log('Try again');
+			// }
+
+
+			let daycount = new Date().getDay();
+			console.log(daycount);
+			console.log(typeof daycount);
+
+			let today;
+			//console.log(today);
+
+			switch(daycount){
+				case 0:
+				today = 'Sunday';
+				break;
+
+				case 1:
+				today = 'Monday';
+				break;
+
+				case 2:
+				today = 'Tuesday';
+				break;
+
+				case 3:
+				today = 'Wednesday';
+				break;
+
+				case 4:
+				today = 'Thursday';
+				break;
+
+				case 5:
+				today = 'Friday';
+				break;
+
+				case 6:
+				today = 'Saturday';
+				break;
+
+			}
+			document.write(`Today is ${today}`)
+
+
+			let p = 10;
+			let q = 50;
+			q = p;
+			console.log('Assignment Opeator =' + q);
+
+
+
+
+
+
+			
+		</script>
+		<body>
+</html>
+
+
+<!-- Comparison Operators(9 types)
+
+==      equal to
+===		equal to
+!=		not equal
+!==		not equal
+>		greater than
+< 		less than
+>=		greater than or equal
+<=		less than or equal
+?		ternary operator	
+
+Logical Operators
+
+&&   	and
+||		or -->
+
+<!-- Asssignment Operators
+= 	Assign
++= 	Add  -->

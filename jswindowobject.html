@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window Object</title>
+	<style type='text/css'>
+	@media print{
+		*{
+			visibility: hidden;
+		}
+		#printarea *{
+			visibility: visible;
+		}
+
+		/*Another way*/
+		/*#printarea{
+			opacity: 0;
+		}
+		#printarea#show{
+			opacity: 1;
+		}*/
+	}
+	@page{
+		margin: 0;
+
+		/*size: portrait;*/
+		/*size: landscape;*/
+		size: auto;
+	}
+
+
+
+</style>
+	</head>
+	<body>
+
+		<button onclick='printme()'>Print</button>
+
+		<hr/>
+		<div id='printarea'>
+			<h1>This is paragraph 1</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<div id='printarea'>
+			<h1>This is paragraph 2</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<div id="printarea show">
+			<h1>This is paragraph 3</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+
+		<script type="text/javascript">
+			// Alert
+			// window.alert('Hello World');
+
+			// Prompt
+			// const input = prompt('Write Something');
+			// console.log(input);
+
+			//confirm
+			// if(confirm('Are you sure')){
+			// 	console.log('Yes.I want to delete');
+			// }else{
+			// 	console.log('Oh! sorry i don\'t');
+			// }
+
+			function printme(){
+				console.log('Hay');
+				window.print();
+			}
+
+
+
+		</script>
+	</body>
+</html>

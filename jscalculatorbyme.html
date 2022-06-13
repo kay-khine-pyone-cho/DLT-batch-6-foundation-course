@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Js Calculator</title>
+  </head>
+  <body>
+      <form action="" method="">
+
+        <div>
+            <label for="firstno">firstnumber</label>
+            <input type="text" id="firstno" name='firstnumber' class="">
+        </div>
+        <br><br>
+
+        <div>
+            <label for="secondno">secondnumber<label>
+                <input type="text" name='secondnumber' id="secondno" class="">
+        </div>
+        <br><br>
+
+        <button type="button" id="add" class="" onclick="sign('+')">+</button>
+        <button type="button" id="sub" class="" onclick="sign('-')">-</button>
+        <button type="button" id="multi" class="" onclick="sign('*')">*</button>
+        <button type="button" id="divi" class="" onclick="sign('/')">/</button>
+        <button type="button" id="mod" class="" onclick="sign('%')">%</button>
+
+        <button type="button" id="cal" class="" onclick="calculate()">Calculate</button>
+
+        <input type="text" name='tempsign' id="tempsign" class="">
+        <input type="text" name="display" id="display">
+
+        <br><br>
+        <input type="text" id="result" class=""/>
+        
+
+      </form>
+    <script type="text/javascript">
+        function sign(sign){
+            document.getElementById('tempsign').value=sign;
+
+        }
+        function calculate(){
+          let num1 =Number(document.getElementById('firstno').value),
+                num2=Number( document.getElementById('secondno').value);
+                let getsign= document.getElementById('tempsign').value;
+                document.getElementById('display').value =`${num1} ${getsign} ${num2}`;
+
+                let cal;
+
+                switch(getsign){
+                    case '+':
+                        cal= num1 + num2;
+                        break;
+                    case '-':
+                        cal= num1-num2;
+                        break;
+                    case '*':
+                        cal= num1*num2;
+                        break;
+                    case '/':
+                        cal= num1/num2;
+                        break;
+                    case '%':
+                        cal= num1%num2;
+                        break;
+                    default:
+                        window.alert('there is no sigh');
+                    }
+                    document.getElementById('result').value=cal;
+                
+                
+
+      }
+    </script>
+  </body>
+</html>

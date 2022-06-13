@@ -1,0 +1,25 @@
+p{
+	color:red;
+}
+.textalign{
+	text-align:right;
+	text-align:left;
+	text-align:center;
+	text-align:justify;
+}
+.textdecoration{
+	text-decoration:underline;
+	text-decoration:overline;
+    text-decoration:line-through;
+}
+.textline{
+/*letter-spacing:5px;*/
+   /* line-height:4;*/
+	line-height:50px;
+	/*line-height:200%;
+*/}
+.textshadow{
+	/*text-shadow:-5px 5px 5px yellow;*/
+	text-shadow:5px -5px 5px #4b8f47;
+
+}

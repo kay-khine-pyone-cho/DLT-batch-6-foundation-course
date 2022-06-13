@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow Function</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//Arrow function
+
+	let regnanualfun = function(){
+		return 'i love mandalay';
+	}
+	console.log(regnanualfun());
+
+
+	//Method 1
+
+	let arrmanualfun =() =>{
+		return 'Fun One';
+	}
+	console.log(arrmanualfun());
+	// ------------------
+
+
+	let arrmanualfun2 = () => 'Hello Yangon';
+	console.log(arrmanualfun2());
+	// ------------------
+
+	let arrmanualfun3 = () =>(
+		{name : 'Aung Aung'});
+	console.log(arrmanualfun3());
+	
+
+	// ii. Parameter Function
+	let regsinglefun = function(num1){
+		return num1-10;
+	}
+	console.log('This is reg function with single parameter = ' + regsinglefun(10));
+
+	let regmultifun = function(num2,num3){
+		return num2+num3;
+
+	} 
+	console.log('This is reg function with multiple parameter = ' + regmultifun(10,20));
+
+	// -----------------------------------------------------------------------
+	// Arr function
+	//Single parameter
+
+	let arrsinglefun = (num1)=>{
+		return num1+10;
+	}
+	console.log('This is arr function with single parameter = ' +arrsinglefun(10));
+
+	let arrsinglefun2 = num1=>{
+		return num1+10;
+	}
+	console.log('This is arr function with single parameter = ' +arrsinglefun2(40));
+
+
+	let arrsinglefun3 = (num1) => num1+10;
+	
+	console.log('This is arr function with single parameter = ' + arrsinglefun3(20));
+	// -----------------
+	//Multi parameter
+	let arrmultifun = (num1,num2) =>{
+		return num1 + num2;
+	}
+	console.log('This is arr function with multi parameter = ' + arrmultifun(10,20));
+
+
+	let arrmultifun2 = (num1=23,num2=54) =>{
+		return num1 + num2;
+	}
+	console.log('This is arr function with multi parameter = ' + arrmultifun2());
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,154 @@
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  /* font-family: sans-serif; */
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.title {
+  margin-top: 0;
+  width: 100%;
+  height: 15%;
+  background: url("../img/dlt-hw3/colors.jpg");
+  color: #fff;
+  text-align: center;
+}
+.title h1,
+.title p {
+  text-shadow: -2px -2px 2px #000;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.form-section {
+  width: 20%;
+  /* height: 550px; */
+}
+.footer-right {
+  width: 100%;
+  height: 550px;
+}
+.footer-right-bot {
+  margin-left: 30px;
+}
+.footer-right .footer-content {
+  padding-left: 5px;
+}
+.sign-up,
+.log-in,
+.token,
+.news,
+.contact {
+  width: 100%;
+  height: 28px;
+  color: #fff;
+  background-color: green;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
+
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.search-div {
+  width: 100%;
+  background-color: green;
+  margin-bottom: 10px;
+  padding: 0px 5px;
+}
+.search-button {
+  display: flex;
+}
+
+.search-div input {
+  width: 75%;
+  margin-top: 5px;
+  height: 25px;
+}
+.search-div button {
+  width: 25%;
+  height: 25px;
+  margin-top: 5px;
+}
+.search-div p {
+  font-weight: 400;
+  text-align: center;
+  line-height: 130%;
+  padding-bottom: 15px;
+}
+.speakers {
+  width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+}
+.speakers .div1,
+.speakers .div2,
+.speakers .div3,
+.speakers .div4 {
+  width: 22%;
+  height: 220px;
+  background-color: orange;
+  position: relative;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  margin-bottom: 20px;
+}
+
+.speakers .div1 img,
+.speakers .div2 img,
+.speakers .div3 img,
+.speakers .div4 img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px;
+}
+.speakers .div1 p,
+.speakers .div2 p,
+.speakers .div3 p,
+.speakers .div4 p {
+  font-size: 14px;
+  color: #fff;
+  /* background-color: rgb(166, 170, 160); */
+  padding-left: 10px;
+  padding-top: 0;
+  padding-right: 15px;
+  text-align: left;
+  /* margin-top: 20px; */
+  text-transform: capitalize;
+}
+.grass {
+  width: 100%;
+  height: 100px;
+  background: url("../img/dlt-hw3/grass.jpg");
+  transform: translateY(40%);
+}
+.grass p {
+  width: 90%;
+  font-size: 16px;
+  text-align: justify;
+  text-transform: capitalize;
+  color: #333;
+  font-weight: 500;
+  padding-left: 10px;
+  transform: translateY(-30%);
+}
+form img {
+  transform: translateY(-10%);
+}

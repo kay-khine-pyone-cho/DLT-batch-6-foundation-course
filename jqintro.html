@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jquery Intro</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="wel" class="come">Welcome to Jquery</h1>
+      <h2 id="mm" class="mm">Welcome to Myanmar</h2>
+      <h3 id="th" class="th">Welcome to Thailand</h3>
+      <h4 id="slk" class="slk">Welcome to Srilanka</h4>
+      <h5 id="indo" class="indo">Welcome to Indonesia</h5>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script type="text/javascript">
+      console.log("hay");
+
+      $(document).ready(function () {
+        // console.log("hay,i am");
+        // window.alert("js alert");
+        // if (window.confirm("Are you sure")) {
+        //   console.log("Yes i am working");
+        // } else {
+        //   console.log("No, i want to sleep");
+        // }
+
+        // const geth1 = document.getElementById("wel");
+        // console.log(geth1);
+        // $("#wel");
+        // $("h1");
+        // $(".mm");
+        $("h1").fadeOut(1000);
+        $(".mm").fadeOut(2000);
+        $("#th").fadeOut(3000);
+      });
+    </script>
+  </body>
+</html>

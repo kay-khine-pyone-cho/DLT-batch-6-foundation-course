@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Set Time Out</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="greeting">Welcome to our site</h1>
+    </div>
+    <hr />
+
+    <div>
+      <button type="button" id="startbtn" onclick="startbtn()">
+        Start alert
+      </button>
+      <button type="button" id="stopbtn" onclick="stopbtn()">Stop alert</button>
+    </div>
+
+    <div>
+      <input type="text" id="url" name="url" />
+      <input type="button" id="gourl" value="Go Url.." onclick="gourl()" />
+      <input
+        type="button"
+        id="favurl"
+        value="Fav Url"
+        onclick="favurl('https://linkin.com')"
+      />
+    </div>
+    <hr />
+
+    <div>
+      <img
+        id="img1"
+        class=""
+        width="200px"
+        height="200px"
+        onmouseover="imgover()"
+        onmouseout="imgout()"
+      />
+    </div>
+    <hr />
+
+    <div>
+      <img src="img/icon/im4.png" id="myimg" alt="myimg" width="100px" />
+      <select name="size" id="size" onchange="imgsize(this)">
+        <option selected disabled>Select</option>
+        <option value="50">small</option>
+        <option value="250">medium</option>
+        <option value="350">large</option>
+      </select>
+    </div>
+
+    <script type="text/javascript">
+      //for greeting
+      //   window.setInterval(newmessage, 2000); //always run
+      window.setTimeout(newmessage, 3000); //stop after 3000ms
+
+      function newmessage() {
+        document.getElementById("greeting").textContent = "See you later...";
+      }
+
+      //   _____________________
+      //for alert
+      function mypopup() {
+        window.alert("welcome sir");
+      }
+      let mytimer;
+      function startbtn() {
+        mypopup();
+        mytimer = window.setTimeout(startbtn, 2000);
+      }
+      function stopbtn() {
+        window.clearInterval(mytimer);
+      }
+      //   _____________________________
+      //For url
+      function gourl() {
+        const geturl = document.getElementById("url").value;
+        window.location = "https://" + geturl;
+      }
+
+      function favurl(fav) {
+        window.location = fav;
+      }
+
+      //   _________________
+      //For img
+      let getimg1 = document.getElementById("img1");
+      window.onload = function () {
+        getimg1.src = "img/icon/im1.png";
+      };
+      function imgover() {
+        getimg1.src = "img/icon/im2.png";
+      }
+      function imgout() {
+        getimg1.src = "img/icon/im3.png";
+      }
+
+      function imgsize(th) {
+        //   let getsize=document.getElementById('size').value;
+        // console.log(th);
+
+        let getsize = th.value;
+        let getmyimg = document.getElementById("myimg");
+        getmyimg.width = getsize;
+      }
+    </script>
+  </body>
+</html>

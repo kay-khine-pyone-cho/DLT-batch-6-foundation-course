@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Array</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			const name = {
+				firstname :'aung aung',
+				lastname :'kyaw',
+			};
+			console.log(name.firstname,name.lastname);
+			console.log(name);
+
+			const persons ={
+				person1 :'kyaw kyaw',
+				person2: 'aung aung',
+				person3: 'zaw zaw',
+			};
+			console.log(persons.person1,persons.person2,persons.person3);
+
+			const arrboys = new Array('kyaw kyaw','aung aung','zaw zaw');
+			console.log(arrboys);
+			console.log(arrboys.length);
+			console.log(arrboys[0]);
+			console.log(arrboys[1]);
+			console.log(arrboys[2]);
+			console.log(arrboys[3]);      //undefined
+
+			const arrgirls = ['su su','mya mya','hla hla','nu nu'];
+			console.log(arrgirls[0]);
+			console.log(arrgirls[1]);
+			console.table(arrgirls);
+			console.table(persons);
+
+			let x = [12,13,14,15,16,17];
+			console.log(x);
+
+			let y = ['hello',1500,true,undefined,null,new Date(),{firstname:'kyaw kyaw',lastname:'aung'}];
+			console.log(y);
+			console.table(y);
+
+			let z = [1000,1100,1200,1300,1400];
+			console.log(z);
+			console.log(z[4]);
+			console.log(z.indexOf(1400));
+			console.log(z.indexOf(1500));
+
+
+			
+		</script>
+	</body>
+</html>

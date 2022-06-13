@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom Clock</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="display"></h3>
+    <script type="text/javascript">
+      let getdisplay = document.getElementById("display");
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      function startclock() {
+        let getdate = new Date();
+        // console.log(getdate);
+        let gethour = getdate.getHours();
+        let getminutes = getdate.getMinutes();
+        let getseconds = getdate.getSeconds();
+
+        // console.log(gethour, getminutes, getseconds);
+        let getday = getdate.getDay();
+
+        let getampm;
+        switch (gethour > 12) {
+          case true:
+            getampm = "PM";
+            gethour = gethour - 12;
+            break;
+
+          case false:
+            getampm = "AM";
+            break;
+        }
+        // let setclock =
+        //   gethour +
+        //   ":" +
+        //   getminutes +
+        //   ":" +
+        //   getseconds +
+        //   " " +
+        //   getampm +
+        //   " " +
+        //   days[getday];
+        let setclock = `${gethour} : ${getminutes} : ${getseconds}  ${getampm} ${days[getday]}`;
+        getdisplay.textContent = setclock;
+      }
+      startclock(); // died
+      setInterval(startclock, 1000);
+    </script>
+  </body>
+</html>
+<!-- 9:37:50 AM Sunday -->
+<!-- 10 April 2022 -->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type Conversion</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let val;
+
+		val = 'Aung Aung';
+		console.log(val);
+		console.log(typeof val);
+		console.log(val.length);
+
+		val = '20';
+		val = '20';
+		val = `20`;
+
+		val = '20+20';
+		console.log(val);
+		console.log(typeof val);
+		console.log(val.length);
+
+		// number to string
+		val = String(20+20);
+		console.log(val);
+		console.log(typeof val);
+		console.log(val.length);
+
+		// Bool to String
+		val = true;
+		val = String(val);
+		console.log(val);
+		console.log(typeof val);
+		console.log(val.length);
+
+		// Date to String
+		val = new Date();
+		val = String(val);
+		console.log(val);
+		console.log(typeof val);
+		console.log(val.length);
+
+		// Array to String
+		val = [1,2,3,4,5];		RS=>1,2,3,4,5
+		val = '[1,2,3,4,5]'; 	RS=>[1,2,3,4,5]
+		val = String(val);
+		console.log(val);
+		console.log(typeof val);
+		console.log(val.length);
+
+
+
+
+	</script>
+</body>
+</html>
